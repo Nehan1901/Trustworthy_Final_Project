@@ -16,9 +16,9 @@
 
 ## Introduction
 
-With growing air traffic, the need for smarter, adaptable mid-air collision avoidance is critical. Traditional systems like TCAS and ADS-B are limited in scope—they’re rule-based and reactive.
+As the volume of air traffic increases, the necessity for increasingly intelligent and adaptive mid-air collision avoidance becomes essential. Legacy systems like TCAS and ADS-B are shortsighted in nature—they are rule-based and reactive.
 
-Our project introduces an AI-driven approach that combines **reinforcement learning (DQN & PPO)** with **LLM-based explanations**, allowing the system to learn safe maneuver strategies and explain them in human-readable language. The system is tested in real-time and simulated environments using flight telemetry data from the OpenSky Network.
+Our project presents an AI system that integrates reinforcement learning (DQN & PPO) with explanation via LLM, enabling the system to learn safe maneuvering strategies and explain them in human-readable text. The system is evaluated in real and simulated environments based on flight telemetry data from the OpenSky Network.
 
 ---
 
@@ -171,11 +171,10 @@ Then visit [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser.
 
 We focused on **robustness** and **generalization**, using the following strategies:
 
-- **Noisy Data Testing**: Introduced Gaussian noise to altitude, velocity, and heading values.
-- **Missing Feature Simulation**: Randomly removed critical fields (e.g., altitude, velocity) to simulate real-world data loss.
-- **Fairness Checks**: Verified that model actions varied with context and did not overfit to specific types of aircraft or altitude.
-- **Generalization**: Evaluated model behavior on unseen simulated airspaces.
-
+- **Noisy Data Testing**:  Incorporated Gaussian noise into altitude, velocity, and heading measurements.
+- **Missing Feature Simulation**:Randomly removed crucial fields (e.g., altitude, velocity) to simulate real-world data loss..
+- **Fairness Checks**: Ensured that model behavior changed with context and didn't overfit to particular types of planes or altitudes.
+- **Generalization**: Tested model performance on unseen simulated airspaces. Results showed that PPO was more stable, and the LLM provided good explanations even with degraded inputs.
 Results showed that **PPO was more stable**, and the LLM provided clear explanations even under degraded inputs.
 
 ---
